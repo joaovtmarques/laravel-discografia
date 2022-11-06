@@ -23,7 +23,7 @@
             </a>
           </li>
           <li>
-            <a href="{{url('add-faixa')}}">
+            <a href="{{url('add-track')}}">
               <x-feathericon-play-circle class="h-8 w-8" />
             </a>
           </li>

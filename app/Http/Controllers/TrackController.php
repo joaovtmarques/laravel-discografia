@@ -6,14 +6,8 @@ use Illuminate\Http\Request;
 
 class TrackController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
+    public function index(){
+      return view('track');
     }
 
     /**
@@ -21,8 +15,7 @@ class TrackController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
+    public function create() {
         //
     }
 
