@@ -26,7 +26,7 @@
 
       <div class="mt-8 px-4">
         <div>
-          <p class="font-aBold">Álbum: <span>Nome do álbum</span></p>
+          <p class="font-aBold">Álbum: <span>Nome do álbum, 2000</span></p>
         </div>
         <div class="mt-3">
           <div class="flex items-center pl-1 mt-1">

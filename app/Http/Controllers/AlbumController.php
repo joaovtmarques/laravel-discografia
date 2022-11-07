@@ -11,6 +11,10 @@ class AlbumController extends Controller
       return view('index');
     }
 
+    public function createAlbum() {
+      return view('album');
+    }
+
     public function create()
     {
         //
