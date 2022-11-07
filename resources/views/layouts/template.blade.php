@@ -9,9 +9,9 @@
 
   <title>@yield('title')</title>
 </head>
-<body class="overflow-x-hidden">
-  <header class="fixed w-screen backdrop-blur-sm bg-white/20 ">
-    <div class="flex flex-1 flex-row items-center justify-between px-8 py-3">
+<body class="h-auto w-screen bg-background bg-cover bg-no-repeat">
+  <header class="h-24 w-full absolute">
+    <div class="backdrop-blur-sm bg-white/20 flex flex-1 flex-row items-center justify-between px-8 py-2">
       <a href="/">
         <img src="{{ URL::to('assets/images/logo-2.png') }}" alt="Logo">
       </a>
@@ -31,9 +31,8 @@
       </nav>
     </div>
   </header>
-  <main class="h-screen w-screen bg-background bg-cover bg-no-repeat">
+  <main class="h-auto w-full flex items-center justify-center">
     @yield('content')
   </main>
-  <footer></footer>
 </body>
 </html>
