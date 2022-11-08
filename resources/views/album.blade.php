@@ -12,13 +12,13 @@
         <form action="" class="w-4/5 sm:w-3/6">
           <div class="flex flex-col mb-8">
             <label for="name" class="font-aLight text-zinc-600 mb-2">Nome do álbum</label>
-            <input type="text" name="Nome" id="name" class="h-12 px-4 rounded-3xl shadow-md outline-none font-aLight text-sm text-zinc-600">
+            <input type="text" name="name" id="name" class="h-12 px-4 rounded-3xl shadow-md outline-none font-aLight text-sm text-zinc-600">
           </div>
           <div class="flex flex-col mb-8">
             <label for="year" class="font-aLight text-zinc-600 mb-2">Ano do álbum</label>
             <input
               type="number"
-              name="Ano"
+              name="year"
               id="year"
               class="h-12 px-4 rounded-3xl shadow-md outline-none font-aLight text-sm text-zinc-600"
               oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
