@@ -6,20 +6,13 @@ use Illuminate\Http\Request;
 
 class AlbumController extends Controller
 {
-    public function index()
-    {
+    public function index(){
       return view('index');
     }
 
-    public function createAlbum() {
-      return view('album');
-    }
-
-    public function create()
-    {
+    public function create() {
         //
     }
-
     public function store(Request $request)
     {
         //
@@ -30,12 +23,18 @@ class AlbumController extends Controller
         //
     }
 
-    public function destroy($id)
+    public function edit($id)
     {
         //
     }
 
-    public function notFound() {
-      return view('notfound');
+    public function update(Request $request, $id)
+    {
+        //
+    }
+
+    public function destroy($id)
+    {
+        //
     }
 }

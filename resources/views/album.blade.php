@@ -9,7 +9,7 @@
         <p class="font-aLight text-2xl sm:text-4xl text-zinc-600">Adicionar álbum</p>
       </div>
       <div class="w-full h-full bg-white/80 sm:px-8 flex flex-col items-center justify-center">
-        <form action="" class="w-4/5 sm:w-3/6">
+        <form action="" method="POST" class="w-4/5 sm:w-3/6">
           <div class="flex flex-col mb-8">
             <label for="name" class="font-aLight text-zinc-600 mb-2">Nome do álbum</label>
             <input type="text" name="name" id="name" class="h-12 px-4 rounded-3xl shadow-md outline-none font-aLight text-sm text-zinc-600">
@@ -25,7 +25,7 @@
               maxlength = "4"
               >
           </div>
-          <button class="h-12 w-full rounded-3xl bg-blue-400 shadow-md cursor-pointer hover:bg-blue-500 flex items-center justify-center">
+          <button type="submit" class="h-12 w-full rounded-3xl bg-blue-400 shadow-md cursor-pointer hover:bg-blue-500 flex items-center justify-center">
             <span class="text-white font-aLight">
               Adicionar
             </span>
