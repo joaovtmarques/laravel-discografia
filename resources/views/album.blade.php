@@ -5,8 +5,9 @@
 @section('content')
   <div class="w-4/5 sm:w-3/5 mt-28 shadow-lg pb-20 mb-20 h-auto">
     <div class="h-96">
-      <div class="h-24 bg-white flex items-center px-8">
-        <p class="font-aLight text-2xl sm:text-4xl text-zinc-600">Adicionar álbum</p>
+      <div class="bg-white w-full sm:h-28 sm:flex-row flex flex-col justify-between items-center px-6 py-6 shadow-lg">
+        <img src="{{ URL::to('assets/images/logo.png') }}" alt="Logo" class="sm:w-40 sm:h-20 w-32 h-12">
+        <h2 class="md:text-4xl sm:font-extralight sm:pt-0 font-normal text-2xl pt-4 font-aLight text-zinc-600">Adicionar álbum</h2>
       </div>
       <div class="w-full h-full bg-white/80 sm:px-8 flex flex-col items-center justify-center">
         <form action="" method="POST" class="w-4/5 sm:w-3/6">

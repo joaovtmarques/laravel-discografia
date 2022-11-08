@@ -6,7 +6,7 @@
   <div class="bg-white/80 w-5/6 shadow-lg pb-20 mb-20 mt-28">
     <div class="bg-white w-full sm:h-28 sm:flex-row flex flex-col justify-between items-center px-6 py-6 shadow-lg">
       <img src="{{ URL::to('assets/images/logo.png') }}" alt="Logo" class="sm:w-40 sm:h-20 w-32 h-12">
-      <h2 class="sm:text-4xl sm:font-extralight sm:pt-0 font-normal text-2xl pt-4 font-aLight text-zinc-600">Discografia</h2>
+      <h2 class="md:text-4xl sm:font-extralight sm:pt-0 font-normal text-2xl pt-4 font-aLight text-zinc-600">Discografia</h2>
     </div>
     <div class="h-auto flex-col items-start p-4">
       <div>

@@ -18,7 +18,7 @@
       <nav>
         <ul class="flex">
           <li class="mr-4">
-            <a href="{{route('albums.index')}}">
+            <a href="{{route('albums.create')}}">
               <x-feathericon-plus-circle class="h-8 w-8" />
             </a>
           </li>
