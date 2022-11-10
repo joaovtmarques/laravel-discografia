@@ -2,20 +2,31 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreTrackRequest;
+use App\Models\Album;
+use App\Models\Track;
 use Illuminate\Http\Request;
 
 class TrackController extends Controller
 {
     public function index(){
-      return view('track');
+      return view('track', array('albums'=>Album::all()));
     }
 
     public function create() {
-        //
+
     }
-    public function store(Request $request)
+    public function store(StoreTrackRequest $request)
     {
-        //
+      $track = new Track;
+      $track->name = $request->name;
+      $track->number = $request->number;
+      $track->minutes = $request->minutes;
+      $track->seconds = $request->seconds;
+      $track->album_id = $request->album_id;
+      $track->save();
+
+      return redirect('albums');
     }
 
     public function show($id)
