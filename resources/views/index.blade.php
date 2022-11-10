@@ -24,38 +24,27 @@
         </div>
       </div>
 
-      <div class="mt-8 px-4">
-        <div>
-          <p class="font-aBold">Álbum: <span>Nome do álbum, 2000</span></p>
-        </div>
-        <div class="mt-3">
-          <div class="flex items-center pl-1 mt-1">
-            <span class="w-8 font-aLight">Nº</span>
-            <span class="w-full pl-6 font-aLight">Faixa</span>
-            <span class="w-20 font-aLight">Duração</span>
+      @foreach ($albums as $album)
+        <div class="mt-8 px-4">
+          <div>
+            <p class="font-aBold">Álbum: <span>{{$album['name']}}, {{$album['year']}}</span></p>
           </div>
-          <div class="flex items-center pl-1 mt-1">
-            <span class="w-8 font-aLight">3</span>
-            <span class="w-full pl-6 font-aLight text-ellipsis">Nome da faixa</span>
-            <span class="w-20 font-aLight">3:22</span>
-          </div>
-          <div class="flex items-center pl-1 mt-1">
-            <span class="w-8 font-aLight">3</span>
-            <span class="w-full pl-6 font-aLight text-ellipsis">Nome da faixa</span>
-            <span class="w-20 font-aLight">3:22</span>
-          </div>
-          <div class="flex items-center pl-1 mt-1">
-            <span class="w-8 font-aLight">3</span>
-            <span class="w-full pl-6 font-aLight text-ellipsis">Nome da faixa</span>
-            <span class="w-20 font-aLight">3:22</span>
-          </div>
-          <div class="flex items-center pl-1 mt-1">
-            <span class="w-8 font-aLight">3</span>
-            <span class="w-full pl-6 font-aLight text-ellipsis">Nome da faixa</span>
-            <span class="w-20 font-aLight">3:22</span>
+          <div class="mt-3">
+            <div class="flex items-center pl-1 mt-1">
+              <span class="w-8 font-aLight">Nº</span>
+              <span class="w-full pl-6 font-aLight">Faixa</span>
+              <span class="w-20 font-aLight">Duração</span>
+            </div>
+            @foreach ($album['track'] as $track)
+              <div class="flex items-center pl-1 mt-1">
+                <span class="w-8 font-aLight">{{$track['number']}}</span>
+                <span class="w-full pl-6 font-aLight text-ellipsis">{{$track['name']}}</span>
+                <span class="w-20 font-aLight">{{$track['minutes']}}:{{$track['seconds']}}</span>
+              </div>
+            @endforeach
           </div>
         </div>
-      </div>
+      @endforeach
     </div>
   </div>
 @endsection

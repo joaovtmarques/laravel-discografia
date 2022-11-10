@@ -4,17 +4,22 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreAlbumRequest;
 use App\Models\Album;
+use App\Models\Track;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class AlbumController extends Controller
 {
     public function index(){
-      return view('index');
+      $albums = Album::with('track')->get()->toArray();
+
+      return view('index', array('albums'=>$albums));
     }
 
     public function create() {
       return view('album');
     }
+
     public function store(StoreAlbumRequest $request)
     {
       $album = new Album;
