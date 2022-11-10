@@ -12,9 +12,9 @@
       <div>
         <span class="font-aLight text-zinc-600text-left">Digite uma palavra-chave</span>
         <div class="w-full h-12 mt-2">
-          <form action="" class="h-full flex flex-row justify-between items-center">
-            <input type="text" class="h-full w-full rounded-3xl outline-none pl-6 font-aLight text-zinc-600 flex-row items-center border-none">
-            <button class="h-full bg-blue-400 rounded-3xl px-4 sm:px-14 ml-4 cursor-pointer hover:bg-blue-500">
+          <form action="{{route('albums.index')}}" method="GET" class="h-full flex flex-row justify-between items-center">
+            <input name="query" type="search" class="h-full w-full rounded-3xl outline-none pl-6 font-aLight text-zinc-600 flex-row items-center border-none">
+            <button type="submit" class="h-full bg-blue-400 rounded-3xl px-4 sm:px-14 ml-4 cursor-pointer hover:bg-blue-500">
               <span class="text-white font-aLight hidden sm:inline">
                 Procurar
               </span>
@@ -23,7 +23,6 @@
           </form>
         </div>
       </div>
-
       @foreach ($albums as $album)
         <div class="mt-8 px-4">
           <div>

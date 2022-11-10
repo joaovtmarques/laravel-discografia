@@ -10,13 +10,22 @@ use Illuminate\Support\Facades\DB;
 
 class AlbumController extends Controller
 {
-    public function index(){
-      $albums = Album::with('track')->get()->toArray();
+    public function index()
+    {
+      if(request()->query('query')) {
+        $albums = Album::where('name', 'like', '%'.request()
+          ->query('query').'%')
+          ->with('track')
+          ->get();
 
-      return view('index', array('albums'=>$albums));
+        return view('index', array('albums'=>$albums));
+      } else {
+        return view('index', array('albums'=>Album::all()));
+      }
     }
 
-    public function create() {
+    public function create()
+    {
       return view('album');
     }
 
@@ -30,9 +39,9 @@ class AlbumController extends Controller
       return redirect('albums');
     }
 
-    public function show($id)
+    public function show(Request $request)
     {
-
+        //
     }
 
     public function edit($id)

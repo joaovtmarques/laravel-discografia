@@ -10,7 +10,7 @@
         <h2 class="md:text-4xl sm:font-extralight sm:pt-0 font-normal text-2xl pt-4 font-aLight text-zinc-600">Adicionar faixa</h2>
       </div>
       <div class="w-full h-full bg-white/80 sm:px-8 py-10 flex flex-col items-center justify-center">
-        <form action="{{route('tracks.store')}}" method="POST" class="w-4/5 sm:w-3/6">
+        <form action="{{route('tracks.show')}}" method="POST" class="w-4/5 sm:w-3/6">
           @csrf
           <div class="flex flex-col mb-8">
             <label for="name" class="font-aLight text-zinc-600 mb-2">Nome da faixa</label>
