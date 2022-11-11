@@ -46,6 +46,8 @@ class TrackController extends Controller
 
     public function destroy($id)
     {
-        //
+      $track = Track::find($id);
+      $track->delete();
+      return redirect('albums')->with('success', 'Faixa excluída com sucesso!');
     }
 }

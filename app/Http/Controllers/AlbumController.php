@@ -56,6 +56,8 @@ class AlbumController extends Controller
 
     public function destroy($id)
     {
-        //
+      $album = Album::find($id);
+      $album->delete();
+      return redirect('albums')->with('success', 'Album excluído com sucesso!');
     }
 }
